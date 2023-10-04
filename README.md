@@ -1,6 +1,6 @@
 **Deploy Command**
 
-``kubectl apply -f pubsub.yaml -n dapr-system``
+``kubectl apply -f pubsub.yaml -n namespace``
 
 **note**: No need to configure the pub/sub localhost with in the same cluster. 
 
