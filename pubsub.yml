@@ -1,0 +1,17 @@
+apiVersion: dapr.io/v1alpha1
+kind: Component
+metadata:
+  name: order-pub-sub
+spec:
+  type: pubsub.gcp.pubsub
+  version: v1
+  metadata:
+  - name: projectId
+    value: "aifeed-dev" # Replace with your GCP project ID
+  - name: topic
+    value: "report_topic" # Replace with your GCP Pub/Sub topic name
+  - name: namespace
+    value: "dapr-system"
+scopes:
+  - orderprocessing
+  - checkout
